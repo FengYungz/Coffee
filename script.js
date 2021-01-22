@@ -11,7 +11,7 @@ const url = 'https://api.polijunior.com.br/produtos';
       <img src="${valor.foto}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${valor.nome}</h5>
-        <p class="card-text">${valor.intensidade}</p>
+        <p class="card-text">Intensidade: ${valor.intensidade}</p>
         <p class="card-text">R$ ${valor.preco}</p>
         <p class="card-text">${valor.descricao}</p>
       </div>
