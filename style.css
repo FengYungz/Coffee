@@ -1,10 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500&display=swap'); /*Importando fonte do google fonts*/
+
+* { /*Tag global para definir fonte no site inteiro*/
+    font-family: 'Syne', sans-serif;
+}
 body {
     background-color: #f7f7f7;
 }
 .produtos {
     margin: 0 auto !important;
+    display: grid;                               /*Ele cria um grid = uma grade organizada*/
+    grid-template-columns: repeat(3, 1fr);       /*define o tamanho ods itens da grade*/
+    max-width: 700px;
+    gap: 20px; /*espaço enter as colunas*/
 }
 .banner {
     width: 100%;
     height: 400px;
+}
+.produtos .card {
+    padding: 10px 5px;
+    margin: 10px;
+    box-shadow: 2px 2px 12px 0 rgba(208, 221, 234, 0.308);
+    border: 0;
+}
+.produtos .card:hover {
+    border: 1px solid #9d5f50; /*definindo borda de 1pixel solida (linha lisa) vermelha*/
+    transition: 1s; /*Determina o tempo para começar a animação*/
+    margin-top: 3px;
+}
+.produtos .card img {
+    max-width: 70%;  /*Largura máxima*/
+    margin: 0 auto;  /*Deixa a margem de baixo e cima = 0 e dos aldos auto para centralizar*/
+}
+.produtos .card .card-body .card-title {
+    color: #9d5f50;
+    font-weight: 700; /*Muda o tamanho da letra*/
+}
+.produtos .card .card-body .card-preco {
+    border: 1px solid black; /*Adicionanado borda em volta doi preço de 1 pixel, solid = Linha lisa e definindo a cor*/
+    padding: 3px;      /*definindo o espaço interior*/
+    border-radius: 4px;  /*Definindo a borda arredondada do entorno do preço*/
+}
+.produtos .card .card-body .card-descricao {
+    font-size: 13px;
+}
+.produtos .card-body {
+    padding: 6px;
+}
+
+.navbar {
+    background-color: #9d5f50;
+}
+
+.footer {
+    background-color: #9d5f50;
+    padding: 20px;
+    text-align: center;
+}
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+@media (max-width:600px) { /*Declarando a resolução ao máximo ou mínimo da tela, ele aplica estilo*/
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

@@ -7,13 +7,13 @@ const url = 'https://api.polijunior.com.br/produtos';
     
     for(let valor of data) {
       document.querySelector('.produtos').innerHTML += `
-      <div class="card mx-3 col" >
+      <div class="card mx-2 col" >
       <img src="${valor.foto}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${valor.nome}</h5>
-        <p class="card-text">Intensidade: ${valor.intensidade}</p>
-        <p class="card-text">R$ ${valor.preco}</p>
-        <p class="card-text">${valor.descricao}</p>
+        <p class="card-intensidade">Intensidade: ${valor.intensidade}</p>
+        <p class="card-preco">R$ ${valor.preco}</p>
+        <p class="card-descricao">${valor.descricao}</p>
       </div>
     </div>
       `
