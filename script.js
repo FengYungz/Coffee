@@ -1,4 +1,4 @@
-const url = 'https://api.polijunior.com.br/produtos';
+const url = 'https://entregavel.polijrinternal.com/produtos';
   
   fetch(url)
   .then(response => response.json() )
